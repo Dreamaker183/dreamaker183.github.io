@@ -15,18 +15,18 @@ const SocialButton = ({
   icon: React.ElementType;
   label: string;
 }) => (
-  <div className="group relative flex items-center">
+  <div className="group/button relative flex items-center">
     <Button
       variant="ghost"
       size="icon"
       asChild
-      className="hover:bg-transparent transition-transform duration-300 ease-in-out group-hover:scale-125"
+      className="hover:bg-transparent transition-transform duration-300 ease-in-out group-hover/button:scale-125"
     >
       <Link href={href} aria-label={ariaLabel} target={href.startsWith("#") ? "" : "_blank"}>
-        <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-125" />
+        <Icon className="h-6 w-6 transition-transform duration-300 group-hover/button:scale-125" />
       </Link>
     </Button>
-    <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover:scale-100 transition-all origin-bottom duration-300">
+    <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover/button:scale-100 transition-all origin-bottom duration-300">
       {label}
     </span>
   </div>
@@ -34,8 +34,8 @@ const SocialButton = ({
 
 export function SocialLinks() {
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-4 p-3 rounded-full bg-card/80 backdrop-blur-sm border shadow-lg">
+    <div className="group fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+      <div className="flex items-center gap-4 p-3 rounded-full bg-card/80 backdrop-blur-sm border shadow-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         <SocialButton href="#hero" aria-label="About Me" icon={User} label="About" />
         <SocialButton href="#experience" aria-label="My Experience" icon={BookText} label="Experience" />
         <SocialButton href="#projects" aria-label="View My Work" icon={Briefcase} label="Projects" />

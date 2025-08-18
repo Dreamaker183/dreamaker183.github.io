@@ -8,6 +8,6 @@ interface BoidsState {
 }
 
 export const useBoids = create<BoidsState>((set) => ({
-  isEnabled: true,
+  isEnabled: false,
   toggleBoids: () => set((state) => ({ isEnabled: !state.isEnabled })),
 }));

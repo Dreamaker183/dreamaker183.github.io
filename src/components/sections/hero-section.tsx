@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { personalData } from "@/lib/data";
 import { MapPin } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export function HeroSection() {
   return (

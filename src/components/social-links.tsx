@@ -15,14 +15,16 @@ const SocialButton = ({
   icon: React.ElementType;
   label: string;
 }) => (
-  <Button variant="ghost" size="icon" asChild className="group relative">
-    <Link href={href} aria-label={ariaLabel}>
-      <Icon className="h-5 w-5" />
-      <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover:scale-100 transition-transform origin-bottom duration-300">
-        {label}
-      </span>
-    </Link>
-  </Button>
+  <div className="group relative">
+    <Button variant="ghost" size="icon" asChild className="hover:bg-transparent transition-transform duration-300 ease-in-out group-hover:scale-110">
+      <Link href={href} aria-label={ariaLabel}>
+        <Icon className="h-5 w-5" />
+      </Link>
+    </Button>
+    <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover:scale-100 transition-transform origin-bottom duration-300">
+      {label}
+    </span>
+  </div>
 );
 
 export function SocialLinks() {

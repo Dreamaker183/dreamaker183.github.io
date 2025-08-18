@@ -7,7 +7,7 @@ import {
 } from "../ui/tooltip";
 import { AnimatedSection } from "../animated-section";
 
-const SkillCard = ({ skill }: { skill: (typeof skills)[0] }) => (
+const SkillCard = ({ skill }: { skill: (typeof skills)[number] }) => (
   <li className="flex flex-col items-center text-center gap-2">
     {(skill as any).url ? (
       <a

@@ -47,14 +47,18 @@ export function ProjectsSection() {
               </div>
 
               <div className="flex gap-2 mt-6">
-                {project.links.map((link) => (
-                  <Button key={link.name} variant="outline" size="sm" asChild>
-                    <Link href={link.url} target="_blank">
-                      <link.icon className="mr-2 h-4 w-4" />
-                      {link.name}
-                    </Link>
-                  </Button>
-                ))}
+                {('comingSoon' in project && (project as any).comingSoon) ? (
+                  <span className="text-sm text-muted-foreground">Coming soon...</span>
+                ) : (
+                  project.links.map((link) => (
+                    <Button key={link.name} variant="outline" size="sm" asChild>
+                      <Link href={link.url} target="_blank">
+                        <link.icon className="mr-2 h-4 w-4" />
+                        {link.name}
+                      </Link>
+                    </Button>
+                  ))
+                )}
               </div>
             </div>
           </Card>

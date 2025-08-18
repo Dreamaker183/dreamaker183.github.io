@@ -11,8 +11,9 @@ export default {
     extend: {
       fontFamily: {
         body: ["var(--font-inter)", "sans-serif"],
-        headline: ["var(--font-inter)", "sans-serif"],
+        headline: ["var(--font-cormorant-garamond)", "serif"],
         code: ["monospace"],
+        quote: ["var(--font-cormorant-garamond)", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",

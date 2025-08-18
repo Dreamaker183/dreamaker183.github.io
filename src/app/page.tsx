@@ -4,7 +4,6 @@ import { EducationSection } from "@/components/sections/education-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { ContactSection } from "@/components/sections/contact-section";
-import { QuoteSection } from "@/components/sections/quote-section";
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
         <ProjectsSection />
         <ContactSection />
       </div>
-      <QuoteSection />
+      {/** Quote moved under Hero section */}
     </main>
   );
 }

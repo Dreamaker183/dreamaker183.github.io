@@ -9,9 +9,35 @@ import { AnimatedSection } from "../animated-section";
 
 const SkillCard = ({ skill }: { skill: (typeof skills)[0] }) => (
   <li className="flex flex-col items-center text-center gap-2">
-    <div className="group flex items-center justify-center w-24 h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
-      <skill.icon className="w-12 h-12 text-muted-foreground transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-    </div>
+    {(skill as any).url ? (
+      <a
+        href={(skill as any).url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center justify-center w-24 h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+        aria-label={skill.name}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={skill.iconUrl}
+          alt={`${skill.name} icon`}
+          className="w-12 h-12 opacity-80 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+          loading="lazy"
+          referrerPolicy="no-referrer"
+        />
+      </a>
+    ) : (
+      <div className="group flex items-center justify-center w-24 h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={skill.iconUrl}
+          alt={`${skill.name} icon`}
+          className="w-12 h-12 opacity-80 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+          loading="lazy"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+    )}
     <p className="text-sm font-medium w-24 truncate">{skill.name}</p>
   </li>
 );

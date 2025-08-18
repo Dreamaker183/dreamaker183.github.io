@@ -9,16 +9,16 @@ export function ExperienceSection() {
         <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
         <p className="text-muted-foreground mt-2">My professional journey so far.</p>
       </div>
-      <div className="relative pl-20">
+      <div className="relative pl-16">
         <div className="absolute left-6 top-0 bottom-0 w-px bg-border"></div>
         <div className="space-y-12">
           {workExperience.map((job, index) => (
             <div key={index} className="relative">
-               <div className="absolute -left-5 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-card border">
+              <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-card border">
                 {/* Placeholder for icon */}
               </div>
-              <div className="absolute left-6 top-5 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
-              <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="absolute left-6 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
+              <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ml-12">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>

@@ -8,14 +8,18 @@ import { QuoteSection } from "@/components/sections/quote-section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
-      <HeroSection />
+    <main className="flex flex-col items-center">
+      <div className="px-4">
+        <HeroSection />
+      </div>
       <QuoteSection />
-      <ExperienceSection />
-      <EducationSection />
-      <TechStackSection />
-      <ProjectsSection />
-      <ContactSection />
+      <div className="px-4">
+        <ExperienceSection />
+        <EducationSection />
+        <TechStackSection />
+        <ProjectsSection />
+        <ContactSection />
+      </div>
     </main>
   );
 }

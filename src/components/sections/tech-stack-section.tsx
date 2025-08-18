@@ -7,18 +7,12 @@ import {
 } from "../ui/tooltip";
 import { AnimatedSection } from "../animated-section";
 
-const SkillIcon = ({ skill }: { skill: (typeof skills)[0] }) => (
-  <li>
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <div className="group flex flex-col items-center gap-2 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
-          <skill.icon className="w-10 h-10 text-muted-foreground transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-        </div>
-      </TooltipTrigger>
-      <TooltipContent>
-        <p>{skill.name}</p>
-      </TooltipContent>
-    </Tooltip>
+const SkillCard = ({ skill }: { skill: (typeof skills)[0] }) => (
+  <li className="flex flex-col items-center text-center gap-2">
+    <div className="group flex items-center justify-center w-24 h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
+      <skill.icon className="w-12 h-12 text-muted-foreground transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+    </div>
+    <p className="text-sm font-medium w-24 truncate">{skill.name}</p>
   </li>
 );
 
@@ -38,39 +32,37 @@ export function TechStackSection() {
           Technologies I love to work with.
         </p>
       </div>
-      <TooltipProvider>
-        <div className="flex flex-col gap-4">
-          <div
-            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
-          >
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll">
-              {firstRowSkills.map((skill) => (
-                <SkillIcon key={skill.name} skill={skill} />
-              ))}
-            </ul>
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll" aria-hidden="true">
-              {firstRowSkills.map((skill) => (
-                <SkillIcon key={skill.name} skill={skill} />
-              ))}
-            </ul>
-          </div>
-          <div
-            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
-            style={{ animationDirection: 'reverse' }}
-          >
-            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll">
-              {secondRowSkills.map((skill) => (
-                <SkillIcon key={skill.name} skill={skill} />
-              ))}
-            </ul>
-             <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll" aria-hidden="true">
-              {secondRowSkills.map((skill) => (
-                <SkillIcon key={skill.name} skill={skill} />
-              ))}
-            </ul>
-          </div>
+      <div className="flex flex-col gap-8">
+        <div
+          className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+        >
+          <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll">
+            {firstRowSkills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </ul>
+          <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll" aria-hidden="true">
+            {firstRowSkills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </ul>
         </div>
-      </TooltipProvider>
+        <div
+          className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+          style={{ animationDirection: 'reverse' }}
+        >
+          <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll">
+            {secondRowSkills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </ul>
+           <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll" aria-hidden="true">
+            {secondRowSkills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </ul>
+        </div>
+      </div>
     </AnimatedSection>
   );
 }

@@ -41,9 +41,6 @@ const nextConfig: NextConfig = {
   assetPrefix: configuredBasePath || undefined,
   devIndicators: {
     buildActivity: false,
-    allowedDevOrigins: [
-      "https://6000-firebase-studio-1755489538332.cluster-bg6uurscprhn6qxr6xwtrhvkf6.cloudworkstations.dev",
-    ],
   }
 };
 

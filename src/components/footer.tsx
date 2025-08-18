@@ -1,0 +1,32 @@
+import { Github, Linkedin } from "lucide-react";
+import { Button } from "./ui/button";
+import Link from "next/link";
+
+export function Footer() {
+  const year = new Date().getFullYear();
+  return (
+    <footer className="w-full py-6 mt-16">
+      <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
+        <p className="text-sm text-muted-foreground">
+          &copy; {year} Your Name. All rights reserved.
+        </p>
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="https://github.com" target="_blank" aria-label="GitHub">
+              <Github className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link
+              href="https://linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </footer>
+  );
+}

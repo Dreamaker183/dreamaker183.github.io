@@ -94,9 +94,9 @@ export const education = [
   },
   {
     institution: "HKU SPACE Community College",
-    degree: "Associate of Engineering",
+    degree: "Associate of Engineering, Major in Computer Science",
     period: "2021 - 2023",
-    description: "Major in Computer Science",
+    description: "",
   },
 ];
 

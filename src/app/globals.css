@@ -82,4 +82,9 @@
   .group-hover-shake:hover > svg {
     animation: shake 0.3s ease-in-out;
   }
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
 }

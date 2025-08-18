@@ -107,7 +107,7 @@ export const projects = [
       "Final Year Project at City University of Hong Kong focusing on the coordinated movements of autonomous agents.",
     tags: ["MATLAB"],
     imageUrl: "https://placehold.co/600x400.png",
-    links: [{ name: "Code", url: "#", icon: Code }],
+    links: [{ name: "Code", url: "#", icon: Github }],
     aiHint: "autonomous agents",
   },
   {
@@ -116,7 +116,7 @@ export const projects = [
       "A startup project developing an AI-powered dressing app. My role included UX/UI design in Figma, full-stack development using React Native and Python, and integrating AI with ComfyUI. The project was submitted to HK Challenge Plus 2024 and IET YPEC 2024.",
     tags: ["Figma", "React Native", "Python", "Stable Diffusion", "ComfyUI"],
     imageUrl: "https://placehold.co/600x400.png",
-    links: [{ name: "Code", url: "#", icon: Code }],
+    links: [{ name: "Code", url: "#", icon: Github }],
     aiHint: "fashion app",
   },
   {
@@ -125,7 +125,7 @@ export const projects = [
       "An innovative power subscription platform that optimizes energy consumption through smart, flexible, and cost-effective solutions using AI-driven analytics. My contributions were primarily in mobile app development using Swift and creating interactive 3D visualizations with Spline.",
     tags: ["Swift", "Spline", "Arduino", "SaaS"],
     imageUrl: "https://placehold.co/600x400.png",
-    links: [{ name: "Code", url: "#", icon: Code }],
+    links: [{ name: "Code", url: "#", icon: Github }],
     aiHint: "smart energy",
   },
   {
@@ -135,7 +135,7 @@ export const projects = [
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
     imageUrl: "https://placehold.co/600x400.png",
     links: [
-      { name: "Code", url: "#", icon: Code },
+      { name: "Code", url: "#", icon: Github },
       { name: "Live", url: "#", icon: Globe },
     ],
     aiHint: "portfolio website",

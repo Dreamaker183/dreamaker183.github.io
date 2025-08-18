@@ -14,11 +14,11 @@ export function ExperienceSection() {
         <div className="space-y-12">
           {workExperience.map((job, index) => (
             <div key={index} className="relative">
+              <div className="absolute -left-6 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
               <div className="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-card border">
                 {/* Placeholder for icon */}
               </div>
-              <div className="absolute left-6 top-6 -translate-x-[55%] -translate-y-1/2 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
-              <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ml-12">
+              <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ml-16">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>

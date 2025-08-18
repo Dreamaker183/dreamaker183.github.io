@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <AnimatedSection
       id="hero"
-      className="w-full max-w-4xl flex flex-col items-center text-center py-20 md:py-32"
+      className="w-full max-w-4xl flex flex-col items-center text-center justify-center min-h-screen"
     >
       <div className="relative w-32 h-32 md:w-40 md:h-40 mb-6">
         <Image

@@ -5,6 +5,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
@@ -14,7 +15,10 @@ import { AnimatedSection } from "../animated-section";
 
 export function ProjectsSection() {
   return (
-    <AnimatedSection id="projects" className="w-full max-w-6xl py-16 md:py-24 border-t">
+    <AnimatedSection
+      id="projects"
+      className="w-full max-w-6xl py-16 md:py-24 border-t"
+    >
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
         <p className="text-muted-foreground mt-2">
@@ -22,34 +26,36 @@ export function ProjectsSection() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-            <CardHeader>
-              <div className="relative w-full h-48 mb-4">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  fill
-                  className="object-cover rounded-md"
-                  data-ai-hint={project.aiHint}
-                />
-              </div>
-              <CardTitle>{project.title}</CardTitle>
-              <div className="flex flex-wrap gap-2 mt-2">
+        {projects.map((project, index) => (
+          <Card
+            key={project.title}
+            className="group overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2"
+          >
+            <div className="relative w-full h-52 overflow-hidden">
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-ai-hint={project.aiHint}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <CardTitle className="mb-2">{project.title}</CardTitle>
+              <CardDescription className="line-clamp-3 flex-grow">
+                {project.description}
+              </CardDescription>
+
+              <div className="flex flex-wrap gap-2 mt-4">
                 {project.tags.map((tag) => (
                   <Badge key={tag} variant="secondary">
                     {tag}
                   </Badge>
                 ))}
               </div>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <p className="text-sm text-muted-foreground">
-                {project.description}
-              </p>
-            </CardContent>
-            <CardFooter>
-              <div className="flex gap-2">
+
+              <div className="flex gap-2 mt-6">
                 {project.links.map((link) => (
                   <Button key={link.name} variant="outline" size="sm" asChild>
                     <Link href={link.url} target="_blank">
@@ -59,7 +65,7 @@ export function ProjectsSection() {
                   </Button>
                 ))}
               </div>
-            </CardFooter>
+            </div>
           </Card>
         ))}
       </div>

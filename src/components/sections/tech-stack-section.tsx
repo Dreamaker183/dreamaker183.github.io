@@ -49,14 +49,13 @@ export function TechStackSection() {
         </div>
         <div
           className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
-          style={{ animationDirection: 'reverse' }}
         >
-          <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll">
+          <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll [animation-direction:reverse]">
             {secondRowSkills.map((skill) => (
               <SkillCard key={skill.name} skill={skill} />
             ))}
           </ul>
-           <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll" aria-hidden="true">
+           <ul className="flex items-start justify-center md:justify-start [&_li]:mx-4 animate-infinite-scroll [animation-direction:reverse]" aria-hidden="true">
             {secondRowSkills.map((skill) => (
               <SkillCard key={skill.name} skill={skill} />
             ))}

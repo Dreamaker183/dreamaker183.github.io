@@ -70,3 +70,16 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  @keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    75% { transform: translate(1px, 1px); }
+    100% { transform: translate(0); }
+  }
+  .group-hover-shake:hover > svg {
+    animation: shake 0.3s ease-in-out;
+  }
+}

@@ -15,13 +15,13 @@ const SocialButton = ({
   icon: React.ElementType;
   label: string;
 }) => (
-  <div className="group relative">
-    <Button variant="ghost" size="icon" asChild className="hover:bg-transparent transition-transform duration-300 ease-in-out group-hover:scale-110">
+  <div className="group relative flex items-center">
+    <Button variant="ghost" size="icon" asChild className="hover:bg-transparent transition-transform duration-300 ease-in-out group-hover:scale-125 group-hover-shake">
       <Link href={href} aria-label={ariaLabel}>
         <Icon className="h-5 w-5" />
       </Link>
     </Button>
-    <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover:scale-100 transition-transform origin-bottom duration-300">
+    <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover:scale-100 transition-all origin-bottom duration-300">
       {label}
     </span>
   </div>
@@ -30,7 +30,7 @@ const SocialButton = ({
 export function SocialLinks() {
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-2 p-2 rounded-full bg-card/80 backdrop-blur-sm border shadow-md">
+      <div className="flex items-center gap-2 p-2 rounded-full bg-card/80 backdrop-blur-sm border shadow-lg">
         <SocialButton href="#projects" aria-label="View My Work" icon={Briefcase} label="Work" />
         <SocialButton href="#contact" aria-label="Contact Me" icon={Mail} label="Contact" />
         

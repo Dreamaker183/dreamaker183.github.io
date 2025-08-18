@@ -31,7 +31,7 @@ export function HeroSection() {
         </div>
         <div className="flex items-center gap-2">
           <GraduationCap className="h-4 w-4" />
-          <span>City University of Hong Kong</span>
+          <span>City University of Hong Kong, Information Engineering</span>
         </div>
       </div>
       <p className="text-muted-foreground leading-relaxed max-w-2xl">

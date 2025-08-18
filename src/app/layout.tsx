@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { SocialLinks } from "@/components/social-links";
 import { ScrollIndicator } from "@/components/scroll-indicator";
 import { BoidsCanvas } from "@/components/boids-canvas";
+import { Header } from "@/components/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <BoidsCanvas />
+          <Header />
           <ScrollIndicator sections={sections} />
           {children}
           <SocialLinks />

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Code } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -18,8 +18,8 @@ export function Header() {
     <header className="py-4 px-4 sm:px-6 md:px-8 lg:px-12 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="#hero">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold text-lg">
-            CH
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground">
+            <Code className="h-6 w-6" />
           </div>
         </Link>
         <nav className="hidden md:flex gap-6">

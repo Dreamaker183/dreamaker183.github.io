@@ -1,5 +1,5 @@
 import { education } from "@/lib/data";
-import { Card, CardHeader, CardTitle, CardDescription } from "../ui/card";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../ui/card";
 import { AnimatedSection } from "../animated-section";
 
 export function EducationSection() {
@@ -9,22 +9,31 @@ export function EducationSection() {
         <h2 className="text-3xl font-bold tracking-tight">Education</h2>
         <p className="text-muted-foreground mt-2">My academic background.</p>
       </div>
-      <div className="space-y-4">
-        {education.map((edu, index) => (
-          <Card key={index} className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-             <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle>{edu.institution}</CardTitle>
-                    <CardDescription>{edu.degree}</CardDescription>
+      <div className="relative pl-6">
+        <div className="absolute left-0 top-0 bottom-0 w-px bg-border -translate-x-3"></div>
+        <div className="space-y-12">
+          {education.map((edu, index) => (
+            <div key={index} className="relative">
+              <div className="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary -translate-x-1/2"></div>
+              <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <CardTitle>{edu.institution}</CardTitle>
+                      <CardDescription>{edu.degree}</CardDescription>
+                    </div>
+                    <div className="text-sm text-muted-foreground text-right whitespace-nowrap">
+                      {edu.period}
+                    </div>
                   </div>
-                  <div className="text-sm text-muted-foreground text-right whitespace-nowrap">
-                    {edu.period}
-                  </div>
-                </div>
-              </CardHeader>
-          </Card>
-        ))}
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{edu.description}</p>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
+        </div>
       </div>
     </AnimatedSection>
   );

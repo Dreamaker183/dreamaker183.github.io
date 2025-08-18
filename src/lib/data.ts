@@ -14,6 +14,16 @@ import {
   ReactIcon,
   TailwindIcon,
   TypescriptIcon,
+  PythonIcon,
+  CppIcon,
+  CIcon,
+  JavaIcon,
+  SqlIcon,
+  SwiftIcon,
+  LinuxIcon,
+  ExpoIcon,
+  FigmaIcon,
+  AltiumIcon,
 } from "@/components/icons";
 
 export const personalData = {
@@ -30,14 +40,18 @@ export const personalData = {
 };
 
 export const skills = [
-  { name: "React", icon: ReactIcon },
+  { name: "Python", icon: PythonIcon },
+  { name: "C++", icon: CppIcon },
+  { name: "C", icon: CIcon },
+  { name: "Java", icon: JavaIcon },
+  { name: "SQL", icon: SqlIcon },
+  { name: "Swift", icon: SwiftIcon },
+  { name: "Linux", icon: LinuxIcon },
   { name: "Next.js", icon: NextjsIcon },
-  { name: "TypeScript", icon: TypescriptIcon },
-  { name: "Node.js", icon: NodejsIcon },
-  { name: "Tailwind CSS", icon: TailwindIcon },
-  { name: "Firebase", icon: FirebaseIcon },
-  { name: "REST APIs", icon: Server },
-  { name: "CLI Tools", icon: Terminal },
+  { name: "Expo", icon: ExpoIcon },
+  { name: "React Native", icon: ReactIcon },
+  { name: "Figma", icon: FigmaIcon },
+  { name: "Altium PCB Design", icon: AltiumIcon },
 ];
 
 export const workExperience = [

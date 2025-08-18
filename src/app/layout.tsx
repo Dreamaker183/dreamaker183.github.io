@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 
 const sections = [
   { id: "hero", label: "Hero" },
+  { id: "quote", label: "Quote" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "tech-stack", label: "Tech Stack" },

@@ -32,7 +32,7 @@ export function ProjectsSection() {
             key={project.title}
             className="group overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2"
           >
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col h-full">
               <CardTitle className="mb-2 font-headline">{project.title}</CardTitle>
               <CardDescription className="flex-grow">
                 {project.description}

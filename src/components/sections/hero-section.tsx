@@ -1,18 +1,11 @@
 import Image from "next/image";
 import { personalData } from "@/lib/data";
 import { MapPin } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { AnimatedSection } from "../animated-section";
 
 export function HeroSection() {
   return (
-    <section
+    <AnimatedSection
       id="hero"
       className="w-full max-w-4xl flex flex-col items-center text-center py-20 md:py-32"
     >
@@ -38,6 +31,6 @@ export function HeroSection() {
        <p className="text-muted-foreground leading-relaxed max-w-2xl">
             {personalData.about}
        </p>
-    </section>
+    </AnimatedSection>
   );
 }

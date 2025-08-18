@@ -1,10 +1,11 @@
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import { AnimatedSection } from "../animated-section";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full max-w-4xl py-16 md:py-24 border-t">
+    <AnimatedSection id="contact" className="w-full max-w-4xl py-16 md:py-24 border-t">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">Contact Me</h2>
         <p className="text-muted-foreground mt-2">
@@ -21,6 +22,6 @@ export function ContactSection() {
           Send Message
         </Button>
       </form>
-    </section>
+    </AnimatedSection>
   );
 }

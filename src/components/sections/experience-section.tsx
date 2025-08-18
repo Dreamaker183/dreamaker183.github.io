@@ -1,9 +1,10 @@
 import { workExperience } from "@/lib/data";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../ui/card";
+import { AnimatedSection } from "../animated-section";
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="w-full max-w-4xl py-16 md:py-24 border-t">
+    <AnimatedSection id="experience" className="w-full max-w-4xl py-16 md:py-24 border-t">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
         <p className="text-muted-foreground mt-2">My professional journey so far.</p>
@@ -34,6 +35,6 @@ export function ExperienceSection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

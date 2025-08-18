@@ -2,7 +2,6 @@ import { projects } from "@/lib/data";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -11,10 +10,11 @@ import { Badge } from "../ui/badge";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { AnimatedSection } from "../animated-section";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full max-w-6xl py-16 md:py-24 border-t">
+    <AnimatedSection id="projects" className="w-full max-w-6xl py-16 md:py-24 border-t">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
         <p className="text-muted-foreground mt-2">
@@ -63,6 +63,6 @@ export function ProjectsSection() {
           </Card>
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

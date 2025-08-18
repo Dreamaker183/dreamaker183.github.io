@@ -1,9 +1,10 @@
 import { skills } from "@/lib/data";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import { AnimatedSection } from "../animated-section";
 
 export function TechStackSection() {
   return (
-    <section id="tech-stack" className="w-full max-w-4xl py-16 md:py-24 border-t">
+    <AnimatedSection id="tech-stack" className="w-full max-w-4xl py-16 md:py-24 border-t">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">My Tech Stack</h2>
         <p className="text-muted-foreground mt-2">Technologies I love to work with.</p>
@@ -25,6 +26,6 @@ export function TechStackSection() {
           ))}
         </div>
       </TooltipProvider>
-    </section>
+    </AnimatedSection>
   );
 }

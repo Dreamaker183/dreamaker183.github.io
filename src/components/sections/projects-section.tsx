@@ -17,7 +17,7 @@ export function ProjectsSection() {
   return (
     <AnimatedSection
       id="projects"
-      className="w-full max-w-6xl py-16 md:py-24 border-t"
+      className="w-full max-w-4xl py-16 md:py-24 border-t"
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">Projects</h2>

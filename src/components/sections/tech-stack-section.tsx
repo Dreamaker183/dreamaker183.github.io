@@ -30,7 +30,7 @@ export function TechStackSection() {
   return (
     <AnimatedSection
       id="tech-stack"
-      className="w-full py-16 md:py-24 border-t"
+      className="w-full max-w-4xl mx-auto py-16 md:py-24 border-t"
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight">My Tech Stack</h2>

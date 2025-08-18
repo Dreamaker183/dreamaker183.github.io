@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { personalData } from "@/lib/data";
-import { MapPin } from "lucide-react";
+import { MapPin, GraduationCap } from "lucide-react";
 import { AnimatedSection } from "../animated-section";
 
 export function HeroSection() {
@@ -24,13 +24,19 @@ export function HeroSection() {
       <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl">
         {personalData.title}
       </p>
-      <div className="flex items-center gap-2 text-muted-foreground mb-8">
-        <MapPin className="h-4 w-4" />
-        <span>{personalData.location}</span>
+      <div className="flex flex-col md:flex-row items-center gap-4 text-muted-foreground mb-8">
+        <div className="flex items-center gap-2">
+          <MapPin className="h-4 w-4" />
+          <span>{personalData.location}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <GraduationCap className="h-4 w-4" />
+          <span>City University of Hong Kong</span>
+        </div>
       </div>
-       <p className="text-muted-foreground leading-relaxed max-w-2xl">
-            {personalData.about}
-       </p>
+      <p className="text-muted-foreground leading-relaxed max-w-2xl">
+        {personalData.about}
+      </p>
     </AnimatedSection>
   );
 }

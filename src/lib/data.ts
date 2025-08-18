@@ -17,12 +17,12 @@ import {
 } from "@/components/icons";
 
 export const personalData = {
-  name: "Your Name",
+  name: "Chun Hin Chan",
   title: "Software Developer & Entrepreneur",
   location: "Hong Kong",
   profilePicture: "https://placehold.co/400x400.png",
   about:
-    "I am a passionate software developer with a knack for building elegant solutions to complex problems. My expertise lies in full-stack development, with a focus on modern web technologies like React, Next.js, and Node.js. I'm also interested in stock trading, fitness, and emerging technologies, and I love exploring how technology can solve real-world challenges.",
+    "A final-year Information Engineering student at CityU, I am deeply passionate about full-stack development and AI integration. With hands-on experience in IT support, STEM education, and AI-driven projects, I excel at solving complex problems. I am actively seeking a software engineering role where I can apply my skills to contribute to an innovative and forward-thinking team.",
   socials: [
     { name: "GitHub", url: "https://github.com", icon: Github },
     { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },

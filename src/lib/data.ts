@@ -59,18 +59,16 @@ export const workExperience = [
 
 export const education = [
   {
-    institution: "Stanford University",
-    degree: "Master's Degree in Artificial Intelligence",
-    period: "2020 - 2022",
-    description:
-      "Focused on advanced topics in machine learning, natural language processing, and computer vision. Completed a thesis on generative models for creative content generation.",
+    institution: "City University of Hong Kong",
+    degree: "Bachelor of Engineering in Information Engineering",
+    period: "2023 – 2026",
+    description: "",
   },
   {
-    institution: "University of Technology",
-    degree: "Bachelor of Science in Computer Science",
-    period: "2014 - 2018",
-    description:
-      "Graduated with honors. Specialized in software engineering and web development. Actively participated in coding clubs and hackathons.",
+    institution: "HKU SPACE Community College",
+    degree: "Associate of Engineering",
+    period: "2021 - 2023",
+    description: "Major in Computer Science",
   },
 ];
 

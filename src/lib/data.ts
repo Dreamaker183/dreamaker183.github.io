@@ -42,18 +42,32 @@ export const skills = [
 
 export const workExperience = [
   {
-    role: "Senior Software Engineer",
-    company: "Tech Solutions Inc.",
-    period: "2020 - Present",
+    role: "Front-end/Backend Web App Developer Intern",
+    company: "Pokeguide Limited",
+    period: "Jun 2025 - Sep 2025",
     description:
-      "Led the development of a high-traffic e-commerce platform using Next.js and TypeScript. Mentored junior developers and improved code quality by implementing a comprehensive testing strategy.",
+      "Developed and maintained dynamic, responsive web and mobile applications using Next.js 15, React, and Expo, delivering seamless user experiences across platforms. Integrated Tailwind CSS for efficient, modern UI styling, ensuring consistent design and rapid development cycles. Built and optimized server-side rendered and static applications using Next.js App Router.",
   },
   {
-    role: "Software Developer",
-    company: "Innovate Co.",
-    period: "2018 - 2020",
+    role: "Design & Marketing Intern",
+    company: "RightPick Technology Limited",
+    period: "Dec 2024 - Jan 2025",
     description:
-      "Developed and maintained client-facing web applications using React and Node.js. Collaborated with designers and product managers to deliver new features and enhance user experience.",
+      "Assisted in planning and executing digital marketing strategies to promote RightPick’s AI-driven JUPAS recommendation platform. Conducted research on emerging education and career trends to align campaigns with user needs. Created engaging social media content and analyzed performance metrics to optimize marketing efforts.",
+  },
+  {
+    role: "STEM Tutor (Part-time)",
+    company: "10Botics Limited | StemWork | SkyDream",
+    period: "Feb 2024 - Present",
+    description:
+      "Conducted tutoring sessions in STEM subjects for diverse student groups, tailoring approaches to individual learning styles. Delivered interactive STEM content and workshops across more than 30 primary and secondary schools. Engaged in public speaking for audiences of over 500 students, promoting STEM education through fun, hands-on activities.",
+  },
+  {
+    role: "IT Support Specialist Intern",
+    company: "DACHSER",
+    period: "Jun 2023 - Sep 2023",
+    description:
+      "Provided technical support across the Asia Pacific region, ensuring timely and effective issue resolution. Assisted in system and network maintenance, contributing to operational reliability and efficiency. Resolved technical issues and provided excellent customer service to internal clients, improving productivity and satisfaction.",
   },
 ];
 

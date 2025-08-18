@@ -31,16 +31,6 @@ export function ProjectsSection() {
             key={project.title}
             className="group overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2"
           >
-            <div className="relative w-full h-52 overflow-hidden">
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                data-ai-hint={project.aiHint}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            </div>
             <div className="p-6 flex flex-col flex-grow">
               <CardTitle className="mb-2 font-headline">{project.title}</CardTitle>
               <CardDescription className="line-clamp-3 flex-grow">

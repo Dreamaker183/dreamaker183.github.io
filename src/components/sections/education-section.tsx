@@ -9,7 +9,7 @@ export function EducationSection() {
         <h2 className="text-3xl font-bold tracking-tight">Education</h2>
         <p className="text-muted-foreground mt-2">My academic background.</p>
       </div>
-      <div className="relative pl-16">
+      <div className="relative pl-6">
         <div className="absolute left-8 top-0 bottom-0 w-px bg-border -translate-x-1/2"></div>
         <div className="space-y-12">
           {education.map((edu, index) => (

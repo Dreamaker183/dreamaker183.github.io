@@ -23,12 +23,6 @@ export const personalData = {
   profilePicture: "https://placehold.co/400x400.png",
   about:
     "I am a passionate software developer with a knack for building elegant solutions to complex problems. My expertise lies in full-stack development, with a focus on modern web technologies like React, Next.js, and Node.js. I'm also interested in stock trading, fitness, and emerging technologies, and I love exploring how technology can solve real-world challenges.",
-  values: [
-    "Continuous Learning",
-    "User-Centric Design",
-    "Code Quality",
-    "Collaboration",
-  ],
   socials: [
     { name: "GitHub", url: "https://github.com", icon: Github },
     { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },

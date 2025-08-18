@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { SocialLinks } from "@/components/social-links";
+import { ScrollIndicator } from "@/components/scroll-indicator";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
   description:
     "Personal portfolio of Your Name, a Software Developer and Entrepreneur based in Hong Kong.",
 };
+
+const sections = [
+  { id: "hero", label: "Hero" },
+  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
+  { id: "tech-stack", label: "Tech Stack" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function RootLayout({
   children,
@@ -40,6 +50,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ScrollIndicator sections={sections} />
           {children}
           <Footer />
           <SocialLinks />

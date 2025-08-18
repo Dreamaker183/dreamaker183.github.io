@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { SocialLinks } from "@/components/social-links";
 import { ScrollIndicator } from "@/components/scroll-indicator";
@@ -54,7 +53,6 @@ export default function RootLayout({
           <BoidsCanvas />
           <ScrollIndicator sections={sections} />
           {children}
-          <Footer />
           <SocialLinks />
           <Toaster />
         </ThemeProvider>

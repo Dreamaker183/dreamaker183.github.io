@@ -42,9 +42,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <SocialLinks />
           {children}
           <Footer />
+          <SocialLinks />
           <Toaster />
         </ThemeProvider>
       </body>

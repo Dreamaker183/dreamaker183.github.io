@@ -27,7 +27,7 @@ import {
 } from "@/components/icons";
 
 export const personalData = {
-  name: "Chun Hin Chan",
+  name: "Anson Chan",
   title: "Software Developer & Entrepreneur",
   location: "Hong Kong",
   profilePicture: "https://placehold.co/400x400.png",

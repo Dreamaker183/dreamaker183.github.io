@@ -23,7 +23,7 @@ const SocialButton = ({
       className="hover:bg-transparent transition-transform duration-300 ease-in-out group-hover:scale-125"
     >
       <Link href={href} aria-label={ariaLabel} target={href.startsWith("#") ? "" : "_blank"}>
-        <Icon className="h-6 w-6 transition-transform duration-300 group-hover:rotate-[360deg] group-hover:scale-125" />
+        <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-125" />
       </Link>
     </Button>
     <span className="absolute bottom-full mb-2 w-auto p-2 min-w-max rounded-md shadow-md text-xs bg-card text-card-foreground scale-0 group-hover:scale-100 transition-all origin-bottom duration-300">

@@ -16,7 +16,7 @@ export function EducationSection() {
           {education.map((edu, index) => (
             <div key={index} className="relative">
               <div className="absolute left-8 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
-              <div className="absolute -left-px top-0 flex items-center justify-center w-12 h-12 rounded-full bg-card border overflow-hidden">
+              <div className="absolute -left-px top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border overflow-hidden">
                 <div className="relative w-10 h-10">
                   <Image
                     src={(edu as any).logoUrl || (edu as any).iconUrl}

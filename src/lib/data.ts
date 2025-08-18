@@ -3,7 +3,7 @@ import { Code, Github, Globe, Linkedin, Server, Terminal } from "lucide-react";
 
 export const personalData = {
   name: "Anson Chan",
-  title: "Software Developer & Entrepreneur",
+  title: "Software Developer & IT Consultant",
   location: "Hong Kong",
   profilePicture: "/image/Screenshot 2025-08-19 at 12.36.18 AM.png",
   about:

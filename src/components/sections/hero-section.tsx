@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { personalData } from "@/lib/data";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import { MapPin } from "lucide-react";
 
 export function HeroSection() {
@@ -29,14 +27,9 @@ export function HeroSection() {
         <MapPin className="h-4 w-4" />
         <span>{personalData.location}</span>
       </div>
-      <div className="flex gap-4">
-        <Button asChild>
-          <Link href="#projects">View My Work</Link>
-        </Button>
-        <Button variant="outline" asChild>
-          <Link href="#contact">Contact Me</Link>
-        </Button>
-      </div>
+       <p className="text-muted-foreground leading-relaxed max-w-2xl">
+            {personalData.about}
+       </p>
     </section>
   );
 }

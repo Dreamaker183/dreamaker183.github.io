@@ -129,7 +129,6 @@ export const projects = [
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
     links: [
       { name: "Code", url: "#", icon: Github },
-      { name: "Live", url: "#", icon: Globe },
     ],
   },
 ];

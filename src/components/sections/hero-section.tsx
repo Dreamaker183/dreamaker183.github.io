@@ -13,7 +13,7 @@ export function HeroSection() {
         <Image
           src={personalData.profilePicture}
           alt={personalData.name}
-          layout="fill"
+          fill
           className="rounded-full object-cover shadow-lg"
           data-ai-hint="profile picture"
         />

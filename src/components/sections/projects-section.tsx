@@ -29,7 +29,7 @@ export function ProjectsSection() {
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
-                  layout="fill"
+                  fill
                   className="object-cover rounded-md"
                   data-ai-hint={project.aiHint}
                 />

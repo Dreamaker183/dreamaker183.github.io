@@ -9,6 +9,7 @@ const Boid = (x: number, y: number) => ({
   y,
   vx: Math.random() * 2 - 1,
   vy: Math.random() * 2 - 1,
+  color: `hsla(${Math.random() * 360}, 90%, 70%, 0.7)`,
 });
 
 export function BoidsCanvas() {
@@ -44,7 +45,6 @@ export function BoidsCanvas() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const boids = boidsRef.current;
       const mouse = mouseRef.current;
-      const boidColor = resolvedTheme === 'dark' ? 'rgba(160, 180, 255, 0.7)' : 'rgba(30, 58, 138, 0.6)';
 
       const separationDistance = 20;
       const alignmentDistance = 40;
@@ -118,10 +118,20 @@ export function BoidsCanvas() {
         if (boid.y > canvas.height) boid.y = 0;
         if (boid.y < 0) boid.y = canvas.height;
         
-        ctx.fillStyle = boidColor;
+        ctx.save();
+        ctx.translate(boid.x, boid.y);
+        const angle = Math.atan2(boid.vy, boid.vx);
+        ctx.rotate(angle);
+        
+        ctx.fillStyle = boid.color;
         ctx.beginPath();
-        ctx.arc(boid.x, boid.y, 3, 0, Math.PI * 2);
+        ctx.moveTo(-6, -4);
+        ctx.lineTo(6, 0);
+        ctx.lineTo(-6, 4);
+        ctx.closePath();
         ctx.fill();
+
+        ctx.restore();
       });
 
       animationFrameId.current = requestAnimationFrame(animate);

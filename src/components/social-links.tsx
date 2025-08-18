@@ -56,13 +56,6 @@ export function SocialLinks() {
         <SocialButton href="#contact" aria-label="Contact Me" icon={Mail} label="Contact" />
         
         <div className="h-6 w-px bg-border mx-2" />
-        
-        <SocialButton 
-          aria-label="Toggle Boids Simulation"
-          icon={Fish}
-          label={isEnabled ? "Hide Fish" : "Show Fish"}
-          onClick={toggleBoids}
-        />
 
         {personalData.socials.map((social) => (
            <SocialButton 
@@ -74,6 +67,13 @@ export function SocialLinks() {
             />
         ))}
         <div className="h-6 w-px bg-border mx-2" />
+        
+        <SocialButton 
+          aria-label="Toggle Boids Simulation"
+          icon={Fish}
+          label={isEnabled ? "Hide Fish" : "Show Fish"}
+          onClick={toggleBoids}
+        />
         <ThemeToggle />
       </div>
     </div>

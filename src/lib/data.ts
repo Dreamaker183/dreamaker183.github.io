@@ -88,6 +88,33 @@ export const education = [
 
 export const projects = [
   {
+    title: "Consensual Movements of Multiple Autonomous Agents (FYP)",
+    description:
+      "Final Year Project at City University of Hong Kong focusing on the coordinated movements of autonomous agents.",
+    tags: ["MATLAB"],
+    imageUrl: "https://placehold.co/600x400.png",
+    links: [{ name: "Code", url: "#", icon: Code }],
+    aiHint: "autonomous agents",
+  },
+  {
+    title: "Fittix - AI Dressing App",
+    description:
+      "A startup project developing an AI-powered dressing app. My role included UX/UI design in Figma, full-stack development using React Native and Python, and integrating AI with ComfyUI. The project was submitted to HK Challenge Plus 2024 and IET YPEC 2024.",
+    tags: ["Figma", "React Native", "Python", "Stable Diffusion", "ComfyUI"],
+    imageUrl: "https://placehold.co/600x400.png",
+    links: [{ name: "Code", url: "#", icon: Code }],
+    aiHint: "fashion app",
+  },
+  {
+    title: "Current+ - Smart Power SaaS",
+    description:
+      "An innovative power subscription platform that optimizes energy consumption through smart, flexible, and cost-effective solutions using AI-driven analytics. My contributions were primarily in mobile app development using Swift and creating interactive 3D visualizations with Spline.",
+    tags: ["Swift", "Spline", "Arduino", "SaaS"],
+    imageUrl: "https://placehold.co/600x400.png",
+    links: [{ name: "Code", url: "#", icon: Code }],
+    aiHint: "smart energy",
+  },
+  {
     title: "Portfolio Website",
     description:
       "This personal portfolio, built with Next.js and Tailwind CSS, to showcase my skills and projects.",
@@ -98,35 +125,5 @@ export const projects = [
       { name: "Live", url: "#", icon: Globe },
     ],
     aiHint: "portfolio website",
-  },
-  {
-    title: "E-commerce Platform",
-    description:
-      "A feature-rich online store with a custom CMS, payment gateway integration, and a responsive design.",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
-    imageUrl: "https://placehold.co/600x400.png",
-    links: [
-      { name: "Code", url: "#", icon: Code },
-      { name: "Live", url: "#", icon: Globe },
-    ],
-    aiHint: "online store",
-  },
-  {
-    title: "Stock Trading Bot",
-    description:
-      "An automated trading bot that uses algorithmic strategies to trade stocks on various exchanges.",
-    tags: ["Python", "Pandas", "API Integration"],
-    imageUrl: "https://placehold.co/600x400.png",
-    links: [{ name: "Code", url: "#", icon: Code }],
-    aiHint: "stock chart",
-  },
-  {
-    title: "Fitness Tracker App",
-    description:
-      "A mobile-friendly application for tracking workouts, setting fitness goals, and monitoring progress over time.",
-    tags: ["React Native", "Firebase", "Chart.js"],
-    imageUrl: "https://placehold.co/600x400.png",
-    links: [{ name: "Code", url: "#", icon: Code }],
-    aiHint: "fitness app",
   },
 ];

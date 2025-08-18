@@ -37,6 +37,12 @@ export function HeroSection() {
       <p className="text-muted-foreground leading-relaxed max-w-2xl">
         {personalData.about}
       </p>
+      <div className="mt-8 border-l-4 border-primary pl-4 italic text-left">
+        <blockquote className="font-headline text-lg text-foreground">
+          &quot;All our dreams can come true, if we have the courage to pursue them.&quot;
+        </blockquote>
+        <cite className="block text-right mt-2 text-muted-foreground">- Walt Disney</cite>
+      </div>
     </AnimatedSection>
   );
 }

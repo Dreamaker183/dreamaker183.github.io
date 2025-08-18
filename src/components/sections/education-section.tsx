@@ -6,7 +6,7 @@ export function EducationSection() {
   return (
     <AnimatedSection id="education" className="w-full max-w-4xl py-16 md:py-24 border-t">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold tracking-tight">Education</h2>
+        <h2 className="text-3xl font-bold font-headline tracking-tight">Education</h2>
         <p className="text-muted-foreground mt-2">My academic background.</p>
       </div>
       <div className="relative pl-2">
@@ -22,7 +22,7 @@ export function EducationSection() {
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>
-                      <CardTitle>{edu.institution}</CardTitle>
+                      <CardTitle className="font-headline">{edu.institution}</CardTitle>
                       <CardDescription>{edu.degree}</CardDescription>
                     </div>
                     <div className="text-sm text-muted-foreground text-right whitespace-nowrap">

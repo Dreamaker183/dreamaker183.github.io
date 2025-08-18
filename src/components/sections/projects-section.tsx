@@ -20,7 +20,7 @@ export function ProjectsSection() {
       className="w-full max-w-4xl py-16 md:py-24 border-t"
     >
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
+        <h2 className="text-3xl font-bold font-headline tracking-tight">Projects</h2>
         <p className="text-muted-foreground mt-2">
           A selection of my recent work.
         </p>
@@ -42,7 +42,7 @@ export function ProjectsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <CardTitle className="mb-2">{project.title}</CardTitle>
+              <CardTitle className="mb-2 font-headline">{project.title}</CardTitle>
               <CardDescription className="line-clamp-3 flex-grow">
                 {project.description}
               </CardDescription>

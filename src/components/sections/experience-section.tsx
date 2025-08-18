@@ -6,7 +6,7 @@ export function ExperienceSection() {
   return (
     <AnimatedSection id="experience" className="w-full max-w-4xl py-16 md:py-24 border-t">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
+        <h2 className="text-3xl font-bold font-headline tracking-tight">Work Experience</h2>
         <p className="text-muted-foreground mt-2">My professional journey so far.</p>
       </div>
       <div className="relative pl-2">
@@ -22,7 +22,7 @@ export function ExperienceSection() {
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>
-                      <CardTitle>{job.role}</CardTitle>
+                      <CardTitle className="font-headline">{job.role}</CardTitle>
                       <CardDescription>{job.company}</CardDescription>
                     </div>
                     <div className="text-sm text-muted-foreground text-right whitespace-nowrap">

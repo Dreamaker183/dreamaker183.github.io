@@ -18,7 +18,7 @@ export function HeroSection() {
           data-ai-hint="profile picture"
         />
       </div>
-      <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-3">
+      <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tighter mb-3">
         {personalData.name}
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl">

@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
@@ -12,12 +13,26 @@ export function ContactSection() {
           I'm always open to discussing new projects, creative ideas, or opportunities.
         </p>
       </div>
-      <form className="max-w-xl mx-auto space-y-4">
+      <form
+        className="max-w-xl mx-auto space-y-4"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const form = e.currentTarget as HTMLFormElement;
+          const data = new FormData(form);
+          const name = (data.get("name") as string) || "";
+          const email = (data.get("email") as string) || "";
+          const message = (data.get("message") as string) || "";
+          const subject = `Portfolio inquiry from ${name}`;
+          const body = `From: ${name} <${email}>\n\n${message}`;
+          const mailto = `mailto:anson20038@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailto;
+        }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Input type="text" placeholder="Name" required />
-          <Input type="email" placeholder="Email" required />
+          <Input type="text" name="name" placeholder="Name" required />
+          <Input type="email" name="email" placeholder="Email" required />
         </div>
-        <Textarea placeholder="Message" rows={5} required />
+        <Textarea name="message" placeholder="Message" rows={5} required />
         <Button type="submit" className="w-full">
           Send Message
         </Button>

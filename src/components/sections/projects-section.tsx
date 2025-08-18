@@ -37,6 +37,22 @@ export function ProjectsSection() {
               <CardDescription className="flex-grow">
                 {project.description}
               </CardDescription>
+              {('assignedBy' in project) && (
+                <div className="mt-3 inline-flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="relative block w-6 h-6 rounded-full overflow-hidden border">
+                    <img src={(project as any).assignedLogoUrl} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                  </span>
+                  <span>Assigned by {(project as any).assignedBy}</span>
+                </div>
+              )}
+              {('schoolBy' in project) && (
+                <div className="mt-2 inline-flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="relative block w-6 h-6 rounded-full overflow-hidden border">
+                    <img src={(project as any).schoolLogoUrl} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                  </span>
+                  <span>{(project as any).schoolBy}</span>
+                </div>
+              )}
 
               <div className="flex flex-wrap gap-2 mt-4">
                 {project.tags.map((tag) => (
@@ -50,10 +66,15 @@ export function ProjectsSection() {
                 {('comingSoon' in project && (project as any).comingSoon) ? (
                   <span className="text-sm text-muted-foreground">Coming soon...</span>
                 ) : (
-                  project.links.map((link) => (
+                  project.links.map((link: any) => (
                     <Button key={link.name} variant="outline" size="sm" asChild>
                       <Link href={link.url} target="_blank">
-                        <link.icon className="mr-2 h-4 w-4" />
+                        {link.iconUrl ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={link.iconUrl} alt="" className="mr-2 h-4 w-4 opacity-90" />
+                        ) : (
+                          <link.icon className="mr-2 h-4 w-4" />
+                        )}
                         {link.name}
                       </Link>
                     </Button>

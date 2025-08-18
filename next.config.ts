@@ -1,7 +1,11 @@
 import type {NextConfig} from 'next';
 
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Enable static export for GitHub Pages
+  output: 'export',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -9,6 +13,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // Optimize for static export / GitHub Pages
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -30,6 +36,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Allow optional basePath/assetPrefix for project pages
+  basePath: configuredBasePath || undefined,
+  assetPrefix: configuredBasePath || undefined,
   devIndicators: {
     buildActivity: false,
     allowedDevOrigins: [

@@ -1,17 +1,16 @@
 import { Code, Github, Globe, Linkedin, Server, Terminal } from "lucide-react";
-import { FigmaIcon } from "@/components/icons";
 
 
 export const personalData = {
   name: "Anson Chan",
   title: "Software Developer & Entrepreneur",
   location: "Hong Kong",
-  profilePicture: "https://placehold.co/400x400.png",
+  profilePicture: "/image/Screenshot 2025-08-19 at 12.36.18 AM.png",
   about:
     "A final-year Information Engineering student at CityU, I am deeply passionate about full-stack development and AI integration. With hands-on experience in IT support, STEM education, and AI-driven projects, I excel at solving complex problems. I am actively seeking a software engineering role where I can apply my skills to contribute to an innovative and forward-thinking team.",
   socials: [
-    { name: "GitHub", url: "https://github.com", icon: Github },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
+    { name: "GitHub", url: "https://github.com/Dreamaker183", icon: Github },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/anson-c-887474241/", icon: Linkedin },
   ],
 };
 
@@ -106,25 +105,53 @@ export const projects = [
   {
     title: "Fittix - AI Dressing App",
     description:
-      "A startup project developing an AI-powered dressing app. My role included UX/UI design in Figma, full-stack development using React Native and Python, and integrating AI with ComfyUI. The project was submitted to HK Challenge Plus 2024 and IET YPEC 2024.",
+      "React Native + Expo mobile app for fashion enthusiasts: browse fashion news, read style blogs, search trends, try virtual outfits, manage profiles and saved items, and write blogs. Built with Expo Router and TypeScript.",
     tags: ["Figma", "React Native", "Python", "Stable Diffusion", "ComfyUI"],
     links: [
-      { name: "GitHub", url: "#", icon: Github },
-      { name: "Figma", url: "#", icon: FigmaIcon },
+      { name: "Figma", url: "https://www.figma.com/proto/2Xz0FqZLx70YhzRVpjlUTX/Fittix?m=dev&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=43-6238&starting-point-node-id=43%3A6666&t=hDqCoM1RXZpwbRMq-1", iconUrl: "https://cdn.simpleicons.org/figma" },
     ],
+  },
+  {
+    title: "Pet Band Tracking App",
+    description:
+      "Web tool to visualize pet location tracks on an interactive Google Map. Converts BD-09 to WGS-84, shows raw GPS/Wi‑Fi points, renders a smoothed road‑snapped route via Directions API, supports time filtering, source toggles, and opens the route in Google Maps. Assigned by Pokeguide Limited.",
+    tags: ["Next.js", "TypeScript", "Google Maps", "Tailwind CSS", "shadcn/ui"],
+    links: [],
+    assignedBy: "Pokeguide Limited",
+    assignedLogoUrl: "/image/pokeguide.png",
   },
   {
     title: "Current+ - Smart Power SaaS",
     description:
       "An innovative power subscription platform that optimizes energy consumption through smart, flexible, and cost-effective solutions using AI-driven analytics. My contributions were primarily in mobile app development using Swift and creating interactive 3D visualizations with Spline.",
     tags: ["Swift", "Spline", "Arduino", "SaaS"],
-    links: [{ name: "GitHub", url: "#", icon: Github }],
+    links: [{ name: "GitHub", url: "https://github.com/Dreamaker183/Current-swift-app.git", icon: Github }],
+    schoolBy: "EE3070 (A+) — City University of Hong Kong",
+    schoolLogoUrl: "/image/Cityu.jpg",
   },
   {
-    title: "Portfolio Website",
+    title: "PokeValue - Pokémon TCG Price Index",
     description:
-      "This personal portfolio, built with Next.js and Tailwind CSS, to showcase my skills and projects.",
-    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
-    links: [{ name: "GitHub", url: "#", icon: Github }],
+      "Modern dashboard for tracking Pokémon TCG market values: overall index, regional trends, trending cards, powerful search/filtering, detailed card views (graded prices, candlestick charts, recent trades), browse-by-set, responsive UI with light/dark mode. Assigned by Pokeguide Limited.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Recharts"],
+    links: [],
+    assignedBy: "Pokeguide Limited",
+    assignedLogoUrl: "/image/pokeguide.png",
+  },
+  {
+    title: "GrindSite - Startup Grind Conference 2025 (InvestHK Event)",
+    description:
+      "Modern, interactive single-page conference site with animated sections and a dynamic schedule. Fully responsive UI built with Tailwind CSS and shadcn/ui; component-driven architecture for maintainability.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Genkit",
+      "React Hook Form",
+      "Zod",
+      "Lucide",
+    ],
+    links: [{ name: "GitHub", url: "https://github.com/Dreamaker183/SII-invitation.git", icon: Github }],
   },
 ];

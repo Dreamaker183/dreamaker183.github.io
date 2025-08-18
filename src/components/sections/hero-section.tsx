@@ -30,14 +30,12 @@ export function HeroSection() {
         <span>{personalData.location}</span>
       </div>
       <div className="flex gap-4">
-        {personalData.socials.map((social) => (
-          <Button key={social.name} variant="outline" asChild>
-            <Link href={social.url} target="_blank">
-              <social.icon className="mr-2 h-4 w-4" />
-              {social.name}
-            </Link>
-          </Button>
-        ))}
+        <Button asChild>
+          <Link href="#projects">View My Work</Link>
+        </Button>
+        <Button variant="outline" asChild>
+          <Link href="#contact">Contact Me</Link>
+        </Button>
       </div>
     </section>
   );

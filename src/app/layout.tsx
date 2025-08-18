@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
+import { SocialLinks } from "@/components/social-links";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
+          <SocialLinks />
           {children}
           <Footer />
           <Toaster />

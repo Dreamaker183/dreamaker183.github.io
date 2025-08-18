@@ -24,9 +24,10 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 {link.label}
+                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
               </Link>
             ))}
           </div>

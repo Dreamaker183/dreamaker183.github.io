@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 
 const sections = [
   { id: "hero", label: "Hero" },
-  { id: "quote", label: "Quote" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "tech-stack", label: "Tech Stack" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
+  { id: "quote", label: "Quote" },
 ];
 
 export default function RootLayout({

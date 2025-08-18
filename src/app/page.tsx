@@ -12,7 +12,6 @@ export default function Home() {
       <div className="px-4">
         <HeroSection />
       </div>
-      <QuoteSection />
       <div className="px-4">
         <ExperienceSection />
         <EducationSection />
@@ -20,6 +19,7 @@ export default function Home() {
         <ProjectsSection />
         <ContactSection />
       </div>
+      <QuoteSection />
     </main>
   );
 }

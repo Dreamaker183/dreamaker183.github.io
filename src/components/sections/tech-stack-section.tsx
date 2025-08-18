@@ -13,8 +13,8 @@ export function TechStackSection() {
           {skills.map((skill) => (
             <Tooltip key={skill.name}>
               <TooltipTrigger asChild>
-                <div className="flex flex-col items-center gap-2 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
-                  <skill.icon className="w-8 h-8 md:w-10 md:h-10 text-muted-foreground group-hover:text-foreground" />
+                <div className="group flex flex-col items-center gap-2 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
+                  <skill.icon className="w-8 h-8 md:w-10 md:h-10 text-muted-foreground transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
                   <span className="text-xs text-center text-muted-foreground hidden sm:block">{skill.name}</span>
                 </div>
               </TooltipTrigger>

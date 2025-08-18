@@ -10,7 +10,7 @@ export function EducationSection() {
       </div>
       <div className="space-y-4">
         {education.map((edu, index) => (
-          <Card key={index}>
+          <Card key={index} className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
              <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>

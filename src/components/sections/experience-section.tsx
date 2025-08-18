@@ -14,7 +14,7 @@ export function ExperienceSection() {
           {workExperience.map((job, index) => (
             <div key={index} className="relative">
               <div className="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary -translate-x-1/2"></div>
-              <Card>
+              <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>

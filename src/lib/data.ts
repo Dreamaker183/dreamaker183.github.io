@@ -152,6 +152,6 @@ export const projects = [
       "Zod",
       "Lucide",
     ],
-    links: [{ name: "GitHub", url: "https://github.com/Dreamaker183/SII-invitation.git", icon: Github }],
+    links: [],
   },
 ];

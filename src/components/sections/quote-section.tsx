@@ -10,7 +10,7 @@ export function QuoteSection() {
       <div className="w-full max-w-4xl mx-auto py-24 md:py-32 px-4 text-center">
         <Separator className="mb-12" />
         <div className="relative">
-          <blockquote className="font-headline text-3xl md:text-5xl lg:text-6xl text-foreground italic leading-tight md:leading-tight lg:leading-tight">
+          <blockquote className="font-quote text-2xl md:text-4xl text-foreground italic leading-tight md:leading-tight">
             &quot;All our dreams can come true, if we have the courage to pursue
             them.&quot;
           </blockquote>

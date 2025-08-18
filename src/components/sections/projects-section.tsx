@@ -1,3 +1,4 @@
+
 import { projects } from "@/lib/data";
 import {
   Card,
@@ -33,7 +34,7 @@ export function ProjectsSection() {
           >
             <div className="p-6 flex flex-col flex-grow">
               <CardTitle className="mb-2 font-headline">{project.title}</CardTitle>
-              <CardDescription className="line-clamp-3 flex-grow">
+              <CardDescription className="flex-grow">
                 {project.description}
               </CardDescription>
 

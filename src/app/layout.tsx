@@ -21,7 +21,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Aura Portfolio | Your Name - Software Developer",
+  title: "Anson Portfolio",
   description:
     "Personal portfolio of Your Name, a Software Developer and Entrepreneur based in Hong Kong.",
 };

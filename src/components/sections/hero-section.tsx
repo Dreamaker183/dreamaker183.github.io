@@ -26,13 +26,13 @@ export function HeroSection() {
           {personalData.title}
         </p>
         <div className="flex flex-col md:flex-row items-center gap-4 text-muted-foreground mb-8 text-xs md:text-sm">
+        <div className="flex items-center gap-2">
+            <GraduationCap className="h-4 w-4" />
+            <span>City University of Hong Kong, Information Engineering</span>
+          </div>
           <div className="flex items-center gap-2">
             <MapPin className="h-4 w-4" />
             <span>{personalData.location}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-4 w-4" />
-            <span>City University of Hong Kong, Information Engineering</span>
           </div>
         </div>
         <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">

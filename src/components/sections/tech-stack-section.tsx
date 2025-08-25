@@ -1,10 +1,4 @@
 import { skills } from "@/lib/data";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../ui/tooltip";
 import { AnimatedSection } from "../animated-section";
 
 const SkillCard = ({ skill }: { skill: (typeof skills)[number] }) => (
@@ -14,31 +8,29 @@ const SkillCard = ({ skill }: { skill: (typeof skills)[number] }) => (
         href={(skill as any).url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center justify-center w-24 h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+        className="group flex items-center justify-center w-20 h-20 md:w-24 md:h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
         aria-label={skill.name}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={skill.iconUrl}
           alt={`${skill.name} icon`}
-          className="w-12 h-12 opacity-80 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+          className="w-10 h-10 md:w-12 md:h-12 opacity-80 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
           loading="lazy"
           referrerPolicy="no-referrer"
         />
       </a>
     ) : (
-      <div className="group flex items-center justify-center w-24 h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
+      <div className="group flex items-center justify-center w-20 h-20 md:w-24 md:h-24 p-3 rounded-lg bg-card hover:bg-secondary transition-colors cursor-pointer">
         <img
           src={skill.iconUrl}
           alt={`${skill.name} icon`}
-          className="w-12 h-12 opacity-80 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+          className="w-10 h-10 md:w-12 md:h-12 opacity-80 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
           loading="lazy"
           referrerPolicy="no-referrer"
         />
       </div>
     )}
-    <p className="text-sm font-medium w-24 truncate">{skill.name}</p>
+    <p className="text-xs md:text-sm font-medium w-24 truncate">{skill.name}</p>
   </li>
 );
 
@@ -58,7 +50,9 @@ export function TechStackSection() {
           Technologies I love to work with.
         </p>
       </div>
-      <div className="flex flex-col gap-8">
+
+      {/* Desktop: Scrolling Animation */}
+      <div className="hidden md:flex flex-col gap-8">
         <div
           className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
         >
@@ -88,6 +82,16 @@ export function TechStackSection() {
           </ul>
         </div>
       </div>
+      
+      {/* Mobile: Simple Grid */}
+      <div className="md:hidden">
+        <ul className="flex flex-wrap justify-center gap-4">
+            {skills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+        </ul>
+      </div>
+
     </AnimatedSection>
   );
 }

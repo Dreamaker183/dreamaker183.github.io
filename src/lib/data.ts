@@ -41,7 +41,7 @@ export const workExperience = [
       "Developed and maintained dynamic, responsive web and mobile applications using Next.js 15, React, and Expo, delivering seamless user experiences across platforms. Integrated Tailwind CSS for efficient, modern UI styling, ensuring consistent design and rapid development cycles. Built and optimized server-side rendered and static applications using Next.js App Router.",
   },
   {
-    role: "Design & Marketing Intern",
+    role: "Digital Design & Marketing Intern",
     company: "RightPick Technology Limited",
     period: "Dec 2024 - Jan 2025",
     iconUrl: "https://api.iconify.design/lucide/megaphone.svg",
@@ -74,8 +74,8 @@ export const workExperience = [
 
 export const education = [
   {
-    institution: "City University of Hong Kong, Information Engineering",
-    degree: "Hong Kong",
+    institution: "City University of Hong Kong",
+    degree: "Bachelor of Engineering in Information Engineering",
     period: "2023 – 2026",
     iconUrl: "https://api.iconify.design/lucide/graduation-cap.svg",
     logoUrl: "/image/Cityu.jpg",

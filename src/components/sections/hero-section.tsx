@@ -19,13 +19,13 @@ export function HeroSection() {
             data-ai-hint="profile picture"
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tighter mb-3">
+        <h1 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter mb-3">
           {personalData.name}
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl">
+        <p className="text-xl md:text-xl text-muted-foreground mb-4 max-w-2xl">
           {personalData.title}
         </p>
-        <div className="flex flex-col md:flex-row items-center gap-4 text-muted-foreground mb-8">
+        <div className="flex flex-col md:flex-row items-center gap-4 text-muted-foreground mb-8 text-sm">
           <div className="flex items-center gap-2">
             <MapPin className="h-4 w-4" />
             <span>{personalData.location}</span>
@@ -35,11 +35,11 @@ export function HeroSection() {
             <span>City University of Hong Kong, Information Engineering</span>
           </div>
         </div>
-        <p className="text-muted-foreground leading-relaxed max-w-2xl">
+        <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
           {personalData.about}
         </p>
         <figure className="mt-8 max-w-2xl">
-          <blockquote className="font-quote text-2xl md:text-3xl leading-tight tracking-tight bg-gradient-to-b from-foreground to-muted-foreground/70 bg-clip-text text-transparent">
+          <blockquote className="font-quote text-3xl md:text-3xl leading-tight tracking-tight bg-gradient-to-b from-foreground to-muted-foreground/70 bg-clip-text text-transparent">
             “All our dreams can come true, if we have the courage to pursue them.”
           </blockquote>
           <figcaption className="mt-4 text-sm text-muted-foreground">— Walt Disney</figcaption>

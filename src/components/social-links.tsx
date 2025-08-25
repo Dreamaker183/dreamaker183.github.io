@@ -48,7 +48,7 @@ export function SocialLinks() {
   const { isEnabled, toggleBoids } = useBoids();
 
   return (
-    <div className="group fixed bottom-4 left-1/2 md:left-auto md:right-4 -translate-x-1/2 md:translate-x-0 z-50">
+    <div className="group fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
       <div className="flex items-center gap-2 md:gap-4 p-2 md:p-3 rounded-full bg-card/80 backdrop-blur-sm border shadow-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-1">
         <div className="hidden md:flex items-center gap-4">
           <SocialButton href="#hero" aria-label="About Me" icon={User} label="About" />

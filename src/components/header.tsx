@@ -1,10 +1,15 @@
+
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, Code } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 const navLinks = [
@@ -14,6 +19,12 @@ const navLinks = [
 ];
 
 export function Header() {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsSheetOpen(false);
+  };
+
   return (
     <header className="py-4 px-4 sm:px-6 md:px-8 lg:px-12 w-full">
       <div className="container mx-auto flex justify-between items-center">
@@ -33,7 +44,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu />
@@ -43,13 +54,15 @@ export function Header() {
           <SheetContent side="bottom" className="h-auto">
             <div className="flex flex-col gap-4 p-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-lg font-medium hover:underline text-center"
-                >
-                  {link.label}
-                </Link>
+                <SheetClose key={link.href} asChild>
+                  <Link
+                    href={link.href}
+                    className="text-lg font-medium hover:underline text-center"
+                    onClick={handleLinkClick}
+                  >
+                    {link.label}
+                  </Link>
+                </SheetClose>
               ))}
             </div>
           </SheetContent>

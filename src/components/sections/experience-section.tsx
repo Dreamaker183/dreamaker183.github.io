@@ -10,12 +10,12 @@ export function ExperienceSection() {
         <h2 className="text-3xl font-bold font-headline tracking-tight">Work Experience</h2>
         <p className="text-muted-foreground mt-2">My professional journey so far.</p>
       </div>
-      <div className="relative pl-2">
-        <div className="absolute left-8 top-0 bottom-0 w-px bg-border -translate-x-1/2"></div>
+      <div className="relative pl-4 md:pl-2">
+        <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-border -translate-x-1/2"></div>
         <div className="space-y-12">
           {workExperience.map((job, index) => (
             <div key={index} className="relative">
-              <div className="absolute left-8 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
+              <div className="absolute left-6 md:left-8 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
               <div className="absolute -left-px top-0 flex items-center justify-center w-12 h-12 rounded-full bg-white border overflow-hidden">
                 <div className="relative w-10 h-10">
                   <Image
@@ -37,12 +37,12 @@ export function ExperienceSection() {
                 >
                   <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
                     <CardHeader>
-                      <div className="flex justify-between items-start">
+                      <div className="flex justify-between items-start flex-col sm:flex-row gap-2">
                         <div>
                           <CardTitle className="font-headline">{job.role}</CardTitle>
                           <CardDescription>{job.company}</CardDescription>
                         </div>
-                        <div className="text-sm text-muted-foreground text-right whitespace-nowrap">
+                        <div className="text-sm text-muted-foreground text-left sm:text-right whitespace-nowrap">
                           {job.period}
                         </div>
                       </div>
@@ -55,12 +55,12 @@ export function ExperienceSection() {
               ) : (
                 <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ml-16">
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start flex-col sm:flex-row gap-2">
                       <div>
                         <CardTitle className="font-headline">{job.role}</CardTitle>
                         <CardDescription>{job.company}</CardDescription>
                       </div>
-                      <div className="text-sm text-muted-foreground text-right whitespace-nowrap">
+                      <div className="text-sm text-muted-foreground text-left sm:text-right whitespace-nowrap">
                         {job.period}
                       </div>
                     </div>

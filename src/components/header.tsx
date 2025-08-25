@@ -40,13 +40,13 @@ export function Header() {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left">
+          <SheetContent side="bottom" className="h-auto">
             <div className="flex flex-col gap-4 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-lg font-medium hover:underline"
+                  className="text-lg font-medium hover:underline text-center"
                 >
                   {link.label}
                 </Link>

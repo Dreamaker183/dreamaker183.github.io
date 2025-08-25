@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu, Code } from "lucide-react";
 import {
@@ -11,6 +11,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#experience", label: "Experience" },
@@ -20,14 +21,27 @@ const navLinks = [
 
 export function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   const handleLinkClick = () => {
     setIsSheetOpen(false);
   };
 
   return (
-    <header className="py-4 px-4 sm:px-6 md:px-8 lg:px-12 w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className={cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? 'border-b bg-background/80 backdrop-blur-sm' : 'border-b border-transparent'
+    )}>
+      <div className="container mx-auto flex justify-between items-center py-4 px-4 sm:px-6 md:px-8 lg:px-12">
         <Link href="#hero">
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-muted text-muted-foreground">
             <Code className="h-6 w-6" />

@@ -74,8 +74,8 @@ export const workExperience = [
 
 export const education = [
   {
-    institution: "City University of Hong Kong",
-    degree: "Bachelor of Engineering in Information Engineering",
+    institution: "City University of Hong Kong, Information Engineering",
+    degree: "Hong Kong",
     period: "2023 – 2026",
     iconUrl: "https://api.iconify.design/lucide/graduation-cap.svg",
     logoUrl: "/image/Cityu.jpg",

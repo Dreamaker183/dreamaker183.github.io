@@ -15,18 +15,50 @@ export const personalData = {
 };
 
 export const skills = [
-  { name: "Python", iconUrl: "https://cdn.simpleicons.org/python", url: "https://www.python.org/" },
-  { name: "C++", iconUrl: "https://cdn.simpleicons.org/cplusplus", url: "https://isocpp.org/" },
-  { name: "C", iconUrl: "https://cdn.simpleicons.org/c", url: "https://www.open-std.org/jtc1/sc22/wg14/" },
-  { name: "Java", iconUrl: "https://cdn.simpleicons.org/openjdk", url: "https://www.oracle.com/java/" },
-  { name: "SQL", iconUrl: "https://cdn.simpleicons.org/mysql", url: "https://www.mysql.com/" },
-  { name: "Swift", iconUrl: "https://cdn.simpleicons.org/swift", url: "https://www.swift.org/" },
-  { name: "Linux", iconUrl: "https://cdn.simpleicons.org/linux", url: "https://www.kernel.org/" },
-  { name: "Next.js", iconUrl: "https://cdn.simpleicons.org/nextdotjs", url: "https://nextjs.org/" },
-  { name: "Expo", iconUrl: "https://cdn.simpleicons.org/expo", url: "https://expo.dev/" },
-  { name: "React Native", iconUrl: "https://cdn.simpleicons.org/react", url: "https://reactnative.dev/" },
-  { name: "Figma", iconUrl: "https://cdn.simpleicons.org/figma", url: "https://www.figma.com/" },
-  { name: "Altium PCB Design", iconUrl: "https://cdn.simpleicons.org/altiumdesigner", url: "https://www.altium.com/altium-designer" },
+  // Frontend & Web Technologies
+  { name: "React", iconUrl: "https://cdn.simpleicons.org/react", url: "https://reactjs.org/", category: "Frontend" },
+  { name: "Next.js", iconUrl: "https://cdn.simpleicons.org/nextdotjs", url: "https://nextjs.org/", category: "Frontend" },
+  { name: "TypeScript", iconUrl: "https://cdn.simpleicons.org/typescript", url: "https://www.typescriptlang.org/", category: "Frontend" },
+  { name: "React Native", iconUrl: "https://cdn.simpleicons.org/react", url: "https://reactnative.dev/", category: "Frontend" },
+  { name: "Expo", iconUrl: "https://cdn.simpleicons.org/expo", url: "https://expo.dev/", category: "Frontend" },
+  { name: "Swift", iconUrl: "https://cdn.simpleicons.org/swift", url: "https://www.swift.org/", category: "Frontend" },
+  
+  // UI/UX & Design
+  { name: "Tailwind CSS", iconUrl: "https://cdn.simpleicons.org/tailwindcss", url: "https://tailwindcss.com/", category: "UI/UX" },
+  { name: "Figma", iconUrl: "https://cdn.simpleicons.org/figma", url: "https://www.figma.com/", category: "UI/UX" },
+  { name: "shadcn/ui", iconUrl: "https://cdn.simpleicons.org/shadcnui", url: "https://ui.shadcn.com/", category: "UI/UX" },
+  { name: "Mantine UI", iconUrl: "https://cdn.simpleicons.org/mantine", url: "https://mantine.dev/", category: "UI/UX" },
+  { name: "Recharts", iconUrl: "https://api.iconify.design/lucide/bar-chart-3.svg", url: "https://recharts.org/", category: "UI/UX" },
+  { name: "Spline", iconUrl: "https://api.iconify.design/lucide/box.svg", url: "https://spline.design/", category: "UI/UX" },
+  { name: "Altium PCB Design", iconUrl: "https://cdn.simpleicons.org/altiumdesigner", url: "https://www.altium.com/altium-designer", category: "PCB Design Tools" },
+  
+  // Backend & Database
+  { name: "Laravel", iconUrl: "https://cdn.simpleicons.org/laravel", url: "https://laravel.com/", category: "Backend" },
+  { name: "PostgreSQL", iconUrl: "https://cdn.simpleicons.org/postgresql", url: "https://www.postgresql.org/", category: "Backend" },
+  { name: "SQL", iconUrl: "https://cdn.simpleicons.org/mysql", url: "https://www.mysql.com/", category: "Backend" },
+  { name: "Docker", iconUrl: "https://cdn.simpleicons.org/docker", url: "https://www.docker.com/", category: "Backend" },
+  
+  // Programming Languages
+  { name: "Python", iconUrl: "https://cdn.simpleicons.org/python", url: "https://www.python.org/", category: "Languages" },
+  { name: "C++", iconUrl: "https://cdn.simpleicons.org/cplusplus", url: "https://isocpp.org/", category: "Languages" },
+  { name: "C", iconUrl: "https://cdn.simpleicons.org/c", url: "https://www.open-std.org/jtc1/sc22/wg14/", category: "Languages" },
+  { name: "Java", iconUrl: "https://cdn.simpleicons.org/openjdk", url: "https://www.oracle.com/java/", category: "Languages" },
+  { name: "MATLAB", iconUrl: "https://api.iconify.design/lucide/calculator.svg", url: "https://www.mathworks.com/products/matlab.html", category: "Languages" },
+  
+  // AI & Machine Learning
+  { name: "Stable Diffusion", iconUrl: "https://api.iconify.design/logos/stability-ai.svg", url: "https://stability.ai/", category: "AI Tools" },
+  { name: "ComfyUI", iconUrl: "https://api.iconify.design/lucide/brain.svg", url: "https://github.com/comfyanonymous/ComfyUI", category: "AI Tools" },
+  { name: "Genkit", iconUrl: "https://api.iconify.design/lucide/sparkles.svg", url: "https://genkit.ai/", category: "AI Tools" },
+  
+  // Development Tools & Libraries
+  { name: "TanStack Query", iconUrl: "https://api.iconify.design/lucide/database.svg", url: "https://tanstack.com/query", category: "Dev Tools" },
+  { name: "React Hook Form", iconUrl: "https://cdn.simpleicons.org/reacthookform", url: "https://react-hook-form.com/", category: "Dev Tools" },
+  { name: "Zod", iconUrl: "https://cdn.simpleicons.org/zod", url: "https://zod.dev/", category: "Dev Tools" },
+  { name: "Google Maps", iconUrl: "https://cdn.simpleicons.org/googlemaps", url: "https://developers.google.com/maps", category: "Dev Tools" },
+  
+  // Hardware & Systems
+  { name: "Linux", iconUrl: "https://cdn.simpleicons.org/linux", url: "https://www.kernel.org/", category: "Systems" },
+  { name: "Arduino", iconUrl: "https://api.iconify.design/logos/arduino.svg", url: "https://www.arduino.cc/", category: "Systems" },
 ] as const;
 
 export const workExperience = [
@@ -135,6 +167,17 @@ export const projects = [
       "Modern dashboard for tracking Pokémon TCG market values: overall index, regional trends, trending cards, powerful search/filtering, detailed card views (graded prices, candlestick charts, recent trades), browse-by-set, responsive UI with light/dark mode. Assigned by Pokeguide Limited.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Recharts"],
     links: [],
+    assignedBy: "Pokeguide Limited",
+    assignedLogoUrl: "/image/pokeguide.png",
+  },
+  {
+    title: "WOW Events Booking Platform",
+    description:
+      "A comprehensive event management platform built with React frontend and Laravel backend, featuring multilingual support (English, Traditional Chinese, Simplified Chinese), venue management, member management, and event organization capabilities. Assigned by Pokeguide Limited.",
+    tags: ["React", "TypeScript", "Laravel", "PostgreSQL", "Mantine UI", "TanStack Query", "Docker"],
+          links: [
+        { name: "Website", url: "https://wowwow.com.hk/", icon: Globe },
+      ],
     assignedBy: "Pokeguide Limited",
     assignedLogoUrl: "/image/pokeguide.png",
   },
